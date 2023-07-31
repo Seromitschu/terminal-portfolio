@@ -40,7 +40,7 @@ _**Command Template:**_
 > - The current scheme of commands is as follows.
 ```javascript
 if(value === "Command Usage"){
-    //// Mintenance Mod
+    //// Maintenance Mod
     if(config.seromitschu.system.mods.maintenance === true){
         return;
     }
