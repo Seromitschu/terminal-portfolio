@@ -92,11 +92,11 @@ const config = {
           "description": `You can see the website files.`,
           "lsText": `<i class="fa-duotone fa-files"></i> Website files`,
           "files": ` <br><br>
-          <span class="blueText">_notes/note.md</span> <br>
-          <span class="yellowText">_notes/note.js</span> <br>
           src/assets/websiteIcon.png <br>
+          src/assets/screenshot.png <br>
           <span class="greenText">src/css/style.css</span> <br>
           <span class="yellowText">src/js/commands.js</span> <br>
+          <span class="yellowText">src/js/404.js</span> <br>
           <span class="redText">404.html</span> <br>
           <span class="redText">index.html</span> <br>
           <span class="blueText">README.md</span> <br>
