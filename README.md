@@ -2,7 +2,7 @@
 <img style="border-radius: 8px;" src="src/assets/readme/welcomeGIF.gif" alt="Welcome"/>
 
 > - This website made by **Seromitschu**. <br>
-> - Click to see the current trial site. <a href="https://seromitschu.vercel.app">Live Demo<a>
+> - Click to see the current trial site. <a target="_blank" href="https://seromitschu.vercel.app">Live Demo<a>
 
 
 <h1>Build With</h1>
