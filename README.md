@@ -1,7 +1,5 @@
 <h1>Seromitschu Terminal Portfolio</h1>
 <img style="border-radius: 8px;" src="src/assets/readme/welcomeGIF.gif" alt="Welcome"/>
-<br>
-<br>
 
 > - This website made by **Seromitschu**. <br>
 > - Click to see the current trial site. <a href="https://seromitschu.vercel.app">Live Demo<a>
