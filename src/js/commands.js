@@ -3,17 +3,17 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 const t = document.querySelector("#cmdTitle");
 
 //// Config*
-const version = `1.83.1104.31072023`;
+const version = `1.83.2136.04082023.sk17`;
 const config = {
   "seromitschu": {
     "website": {
       "title": `Seromitschu`,
-      "repo": `https://github.com/seromitschu/seromitschu-website`,
+      "repo": `https://github.com/seromitschu/terminal-portfolio`,
       "author": `Seromitschu (or Serhat)`,
     },
     "welcome": {
         "first": `<i class="fa-duotone fa-mace"></i> Made by Seromitschu [Version ${version}] <br> <i class="fa-duotone fa-copyright"></i> All rights reserved.
-        <i class="fa-duotone fa-folder-open"></i> <a href="https://github.com/seromitschu/seromitschu-website" target="_blank">Open Source.</a>`,
+        <i class="fa-duotone fa-folder-open"></i> <a href="https://github.com/seromitschu/terminal-portfolio" target="_blank">Open Source.</a>`,
         "second": `<i class="fa-solid fa-hand-wave"></i> Welcome to my website! Server is loading please wait.`,
         "commands": `<i class="fa-sharp fa-solid fa-user-robot"></i> You can run several commands. Type "<span class="sucess">help</span>" to see the available commands.`
     },
@@ -59,7 +59,7 @@ const config = {
           "description": `Info about quest and website.`,
           "contents": {
             "infoText": `<i class="fa-duotone fa-circle-info"></i> Information received about guest and website`,
-            "infoWarn": `<br><span class="yellowText"><i class="fa-duotone fa-triangle-exclamation"></i> This information is strictly not recorded. You can review the <a href="https://github.com/seromitschu/seromitschu-website" target="_blank">source code.</a></span>`,
+            "infoWarn": `<br><span class="yellowText"><i class="fa-duotone fa-triangle-exclamation"></i> This information is strictly not recorded. You can review the <a href="https://github.com/seromitschu/terminal-portfolio" target="_blank">source code.</a></span>`,
           },
         },
         "exit": {
