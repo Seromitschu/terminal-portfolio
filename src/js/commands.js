@@ -534,6 +534,7 @@ async function getInputValue(){
     }
     trueValue(value);
     consoleSucess(value);
+    document.title = `${config.seromitschu.path.file}/${config.seromitschu.commands.history.usage}`;
     commandHistory();
     saveHistory(document.querySelector("input").value.trim().toLowerCase());
   }
@@ -544,6 +545,7 @@ async function getInputValue(){
     }
     trueValue(value);
     consoleSucess(value);
+    document.title = `${config.seromitschu.path.file}/${config.seromitschu.commands.history.clearHistory.usage}`;
     clearHistory();
   }
   //// LS
