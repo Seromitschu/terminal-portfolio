@@ -12,10 +12,11 @@ const config = {
       "author": `Seromitschu (or Serhat)`,
     },
     "welcome": {
-        "first": `<i class="fa-duotone fa-mace"></i> Made by Seromitschu [Version ${version}] <br> <i class="fa-duotone fa-copyright"></i> All rights reserved.
-        <i class="fa-duotone fa-folder-open"></i> <a href="https://github.com/seromitschu/terminal-portfolio" target="_blank">Open Source.</a>`,
-        "second": `<i class="fa-solid fa-hand-wave"></i> Welcome to my website! Server is loading please wait.`,
-        "commands": `<i class="fa-sharp fa-solid fa-user-robot"></i> You can run several commands. Type "<span class="sucess">help</span>" to see the available commands.`
+      "image": '<img style="width: 250px;" src="https://github.com/Seromitschu/seromitschu/raw/main/readme.gif">',
+      "first": `<i class="fa-duotone fa-mace"></i> Made by Seromitschu [Version ${version}] <br> <i class="fa-duotone fa-copyright"></i> All rights reserved.
+      <i class="fa-duotone fa-folder-open"></i> <a href="https://github.com/seromitschu/terminal-portfolio" target="_blank">Open Source.</a>`,
+      "second": `<i class="fa-solid fa-hand-wave"></i> Welcome to my website! Server is loading please wait.`,
+      "commands": `<i class="fa-sharp fa-solid fa-user-robot"></i> You can run several commands. Type "<span class="sucess">help</span>" to see the available commands.`
     },
     "commands": {
         "help": {
@@ -102,6 +103,14 @@ const config = {
           <span class="blueText">README.md</span> <br>
           <span class="yellowText">server.js</span> <br>
           vercel.json <br>`,
+        },
+        "music": {
+          "usage": `music`,
+          "description": `Find out the last or current music I listened to.`,
+          "contents": {
+            "image": `<img width="45%" align="left" src="https://spotify-github-profile.vercel.app/api/view?uid=dpzbuw7zcqedqxsq6q43z465l&cover_image=true&theme=natemoo-re&show_offline=true&background_color=141414&bar_color=ffffff&bar_color_cover=false"/>`,
+            "replyText": `<span class="yellowText"><i class="fa-duotone fa-triangle-exclamation"></i> Data is collected via spotify. </span><br><br>`
+          }
         },
         "blank": `<i class="fa-solid fa-square-xmark error"></i> Please try to write something.`,
         "commandNotFound": `is not available among the commands. Please try the available commands by typing "<span class="sucess">help</span>".`,
@@ -201,6 +210,7 @@ function createCode(code, text){
 }
 
 async function openTerminal(){
+  createText(config.seromitschu.welcome.image)
   createText(config.seromitschu.welcome.first);
   await delay(config.seromitschu.delays.welcome.first);
   createText(config.seromitschu.welcome.second);
@@ -400,6 +410,7 @@ async function getInputValue(){
     createCode(config.seromitschu.commands.history.usage, config.seromitschu.commands.history.description);
     createCode(config.seromitschu.commands.history.clearHistory.usage, config.seromitschu.commands.history.clearHistory.description);
     createCode(config.seromitschu.commands.ls.usage, config.seromitschu.commands.ls.description);
+    createCode(config.seromitschu.commands.music.usage, config.seromitschu.commands.music.description);
     saveHistory(document.querySelector("input").value.trim().toLowerCase());
   }
   //// About Command
@@ -558,6 +569,18 @@ async function getInputValue(){
     document.title = `${config.seromitschu.path.file}/${config.seromitschu.commands.ls.usage}`;
     createCode(config.seromitschu.commands.ls.lsText, config.seromitschu.commands.ls.files);
     saveHistory(document.querySelector("input").value.trim().toLowerCase());
+  }
+  //// Music
+  else if(value === config.seromitschu.commands.music.usage){
+    if(config.seromitschu.system.mods.maintenance === true){
+      return;
+    }
+    trueValue(value);
+    consoleSucess(value);
+    document.title = `${config.seromitschu.path.file}/${config.seromitschu.commands.music.usage}`;
+    saveHistory(document.querySelector("input").value.trim().toLowerCase());
+    createText(config.seromitschu.commands.music.contents.replyText);
+    createText(config.seromitschu.commands.music.contents.image);
   }
   //// Blank
   else if(value === ""){
