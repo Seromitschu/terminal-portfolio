@@ -399,18 +399,18 @@ async function getInputValue(){
     consoleSucess(value);
     document.title = `${config.seromitschu.path.file}/${config.seromitschu.commands.help.usage}`;
     createText(config.seromitschu.commands.help.contents.helpText);
-    createCode(config.seromitschu.commands.help.usage, config.seromitschu.commands.help.description);
-    createCode(config.seromitschu.commands.clear.usage, config.seromitschu.commands.clear.description);
-    createCode(config.seromitschu.commands.about.usage, config.seromitschu.commands.about.description);
-    createCode(config.seromitschu.commands.social.usage, config.seromitschu.commands.social.description);
-    createCode(config.seromitschu.commands.info.usage, config.seromitschu.commands.info.description);
-    createCode(config.seromitschu.commands.exit.usage, config.seromitschu.commands.exit.description);
-    createCode(config.seromitschu.commands.joke.usage, config.seromitschu.commands.joke.description);
-    createCode(config.seromitschu.commands.reload.usage, config.seromitschu.commands.reload.description);
-    createCode(config.seromitschu.commands.history.usage, config.seromitschu.commands.history.description);
-    createCode(config.seromitschu.commands.history.clearHistory.usage, config.seromitschu.commands.history.clearHistory.description);
-    createCode(config.seromitschu.commands.ls.usage, config.seromitschu.commands.ls.description);
-    createCode(config.seromitschu.commands.music.usage, config.seromitschu.commands.music.description);
+    createCode(`<span class="redText">1.</span> ` + config.seromitschu.commands.help.usage, config.seromitschu.commands.help.description);
+    createCode(`<span class="redText">2.</span> ` + config.seromitschu.commands.clear.usage, config.seromitschu.commands.clear.description);
+    createCode(`<span class="redText">3.</span> ` + config.seromitschu.commands.about.usage, config.seromitschu.commands.about.description);
+    createCode(`<span class="redText">4.</span> ` + config.seromitschu.commands.social.usage, config.seromitschu.commands.social.description);
+    createCode(`<span class="redText">5.</span> ` + config.seromitschu.commands.info.usage, config.seromitschu.commands.info.description);
+    createCode(`<span class="redText">6.</span> ` + config.seromitschu.commands.exit.usage, config.seromitschu.commands.exit.description);
+    createCode(`<span class="redText">7.</span> ` + config.seromitschu.commands.joke.usage, config.seromitschu.commands.joke.description);
+    createCode(`<span class="redText">8.</span> ` + config.seromitschu.commands.reload.usage, config.seromitschu.commands.reload.description);
+    createCode(`<span class="redText">9.</span> ` + config.seromitschu.commands.history.usage, config.seromitschu.commands.history.description);
+    createCode(`<span class="redText">10.</span> ` + config.seromitschu.commands.history.clearHistory.usage, config.seromitschu.commands.history.clearHistory.description);
+    createCode(`<span class="redText">11.</span> ` + config.seromitschu.commands.ls.usage, config.seromitschu.commands.ls.description);
+    createCode(`<span class="redText">12.</span> ` + config.seromitschu.commands.music.usage, config.seromitschu.commands.music.description);
     saveHistory(document.querySelector("input").value.trim().toLowerCase());
   }
   //// About Command
