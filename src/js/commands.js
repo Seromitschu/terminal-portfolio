@@ -3,7 +3,7 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 const t = document.querySelector("#cmdTitle");
 
 //// Config*
-const version = `1.83.2136.04082023.sk17`;
+const version = `1.93.2221.21082023.sk17.7`;
 const config = {
   "seromitschu": {
     "website": {
@@ -105,11 +105,19 @@ const config = {
           vercel.json <br>`,
         },
         "music": {
-          "usage": `music`,
+          "usage": `status --music`,
           "description": `Find out the last or current music I listened to.`,
           "contents": {
             "image": `<img width="45%" align="left" src="https://spotify-github-profile.vercel.app/api/view?uid=dpzbuw7zcqedqxsq6q43z465l&cover_image=true&theme=natemoo-re&show_offline=true&background_color=141414&bar_color=ffffff&bar_color_cover=false"/>`,
-            "replyText": `<span class="yellowText"><i class="fa-duotone fa-triangle-exclamation"></i> Data is collected via spotify. </span><br><br>`
+            "replyText": `<span class="yellowText"><i class="fa-duotone fa-triangle-exclamation"></i> Data is collected via Spotify. </span><br><br>`
+          }
+        },
+        "visitors": {
+          "usage": `count --visitors`,
+          "description": `Find out the number of visitors.`,
+          "contents": {
+            "image": `<img  align="left" width="45%" src="https://count.getloli.com/get/@:seromitschu?theme=asoul"> `,
+            "replyText": `<span class="yellowText"><i class="fa-duotone fa-triangle-exclamation"></i> Data is collected via Github. </span><br><br>`,
           }
         },
         "blank": `<i class="fa-solid fa-square-xmark error"></i> Please try to write something.`,
@@ -210,6 +218,7 @@ function createCode(code, text){
 }
 
 async function openTerminal(){
+  console.log(`%c Welcome to the console. You can review information about the commands you are using below.`, `color: #F5544D`);
   createText(config.seromitschu.welcome.image)
   createText(config.seromitschu.welcome.first);
   await delay(config.seromitschu.delays.welcome.first);
@@ -368,12 +377,12 @@ async function commandHistory(){
   }else{
       await createCode(config.seromitschu.commands.history.reply, "");
       for(let i=0;i<record.length;++i){
-          await createText((i+1).toString() + ". " + record[i]);
+          await createText(`<span class="redText">${(i+1).toString()}</span>` + `<span class="redText">.</span> ` + record[i]);
       }
       await createText(config.seromitschu.commands.history.infoReply)
   }
 }
-
+// Clear History
 async function clearHistory(){
   let record = JSON.parse(localStorage.getItem("history")) || [];
   await createText(config.seromitschu.commands.history.clearHistory.reply);
@@ -411,6 +420,7 @@ async function getInputValue(){
     createCode(`<span class="redText">10.</span> ` + config.seromitschu.commands.history.clearHistory.usage, config.seromitschu.commands.history.clearHistory.description);
     createCode(`<span class="redText">11.</span> ` + config.seromitschu.commands.ls.usage, config.seromitschu.commands.ls.description);
     createCode(`<span class="redText">12.</span> ` + config.seromitschu.commands.music.usage, config.seromitschu.commands.music.description);
+    createCode(`<span class="redText">13.</span> ` + config.seromitschu.commands.visitors.usage, config.seromitschu.commands.visitors.description);
     saveHistory(document.querySelector("input").value.trim().toLowerCase());
   }
   //// About Command
@@ -581,6 +591,18 @@ async function getInputValue(){
     saveHistory(document.querySelector("input").value.trim().toLowerCase());
     createText(config.seromitschu.commands.music.contents.replyText);
     createText(config.seromitschu.commands.music.contents.image);
+  }
+  //// Visitors
+  else if(value === config.seromitschu.commands.visitors.usage){
+    if(config.seromitschu.system.mods.maintenance === true){
+      return;
+    }
+    trueValue(value);
+    consoleSucess(value);
+    document.title = `${config.seromitschu.path.file}/${config.seromitschu.commands.visitors.usage}`;
+    saveHistory(document.querySelector("input").value.trim().toLowerCase());
+    createText(config.seromitschu.commands.visitors.contents.replyText);
+    createText(config.seromitschu.commands.visitors.contents.image);
   }
   //// Blank
   else if(value === ""){
