@@ -1,6 +1,5 @@
 const app = document.querySelector("#app");
 const delay = ms => new Promise(res => setTimeout(res, ms));
-const t = document.querySelector("#cmdTitle");
 
 //// Config*
 const config = {
@@ -115,6 +114,7 @@ function createCode(code, text){
 }
 
 async function openTerminal(){
+  console.log(`%c Welcome to the console. You can review information about the commands you are using below.`, `color: #F5544D`);
   createText(config.seromitschu.welcome.first);
   await delay(config.seromitschu.delays.welcome.first);
   createText(config.seromitschu.welcome.second);
