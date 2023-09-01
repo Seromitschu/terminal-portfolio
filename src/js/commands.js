@@ -442,7 +442,7 @@ async function getInputValue(){
     trueValue(value);
     consoleSucess(value);
     document.title = `${config.seromitschu.path.file}/${config.seromitschu.commands.social.usage}`;
-    createCode(config.seromitschu.commands.social.contents.socialText, `<br><br>` + config.seromitschu.commands.social.contents.discord + config.seromitschu.commands.social.contents.steam + config.seromitschu.commands.social.contents.spotify + config.seromitschu.commands.social.contents.gitHub);
+    createCode(config.seromitschu.commands.social.contents.socialText, `<br><br>` + config.seromitschu.commands.social.contents.discord + config.seromitschu.commands.social.contents.steam + config.seromitschu.commands.social.contents.spotify + config.seromitschu.commands.social.contents.github);
     createText(config.seromitschu.commands.social.contents.socialInfo);
     saveHistory(document.querySelector("input").value.trim().toLowerCase());
   }
