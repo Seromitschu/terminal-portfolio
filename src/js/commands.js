@@ -140,7 +140,7 @@ const config = {
     },
     "system": {
       "mods": {
-        "maintenance": true,
+        "maintenance": false,
         "maintenanceReply": `<span class="yellowText"><i class="fa-duotone fa-triangle-exclamation"></i> The website is under maintenance due to some bugs or update.</span>`,
       },
     },
