@@ -3,7 +3,7 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 const t = document.querySelector("#cmdTitle");
 
 //// Config*
-const version = `1.93.2221.21082023.sk17.7`;
+const version = `1407.29052025.sk.19`;
 const config = {
   "seromitschu": {
     "website": {
