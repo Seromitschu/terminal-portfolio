@@ -219,11 +219,11 @@ function createCode(code, text){
 
 async function openTerminal(){
   console.log(`%c Welcome to the console. You can review information about the commands you are using below.`, `color: #F5544D`);
-  createText(config.seromitschu.welcome.image)
-  createText(config.seromitschu.welcome.first);
-  await delay(config.seromitschu.delays.welcome.first);
-  createText(config.seromitschu.welcome.second);
-  await delay(config.seromitschu.delays.welcome.second);
+///  createText(config.seromitschu.welcome.image)
+//  createText(config.seromitschu.welcome.first);
+//  await delay(config.seromitschu.delays.welcome.first);
+//  createText(config.seromitschu.welcome.second);
+//  await delay(config.seromitschu.delays.welcome.second);
   createText(config.seromitschu.welcome.commands);
   newLine();
 }
@@ -628,5 +628,6 @@ async function getInputValue(){
 }
 
 openTerminal();
+
 
 
