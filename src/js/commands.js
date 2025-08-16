@@ -3,7 +3,7 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 const t = document.querySelector("#cmdTitle");
 
 //// Config*
-const version = `1407.29052025.sk.19`;
+const version = `qaqumi.v1`;
 const config = {
   "seromitschu": {
     "website": {
@@ -12,11 +12,11 @@ const config = {
       "author": `Seromitschu (or Serhat)`,
     },
     "welcome": {
-     // "image": '<img style="width: 250px;" src="https://github.com/Seromitschu/seromitschu/raw/main/readme.gif">',
-    //  "first": `<i class="fa-duotone fa-mace"></i> Made by Seromitschu [Version ${version}] <br> <i class="fa-duotone fa-copyright"></i> All rights reserved.
-   //   <i class="fa-duotone fa-folder-open"></i> <a href="https://github.com/seromitschu/terminal-portfolio" target="_blank">Open Source.</a>`,
-   //   "second": `<i class="fa-solid fa-hand-wave"></i> Welcome to my website! Server is loading please wait.`,
-   //   "commands": `<i class="fa-sharp fa-solid fa-user-robot"></i> You can run several commands. Type "<span class="sucess">help</span>" to see the available commands.`
+      "image": '<img style="width: 250px;" src="https://github.com/Seromitschu/seromitschu/raw/main/readme.gif">',
+      "first": `<i class="fa-duotone fa-mace"></i> Made by Seromitschu [Version ${version}] <br> <i class="fa-duotone fa-copyright"></i> All rights reserved.
+      <i class="fa-duotone fa-folder-open"></i> <a href="https://github.com/seromitschu/terminal-portfolio" target="_blank">Open Source.</a>`,
+      "second": `<i class="fa-solid fa-hand-wave"></i> Welcome to my website! Server is loading please wait.`,
+      "commands": `<span class="yellowText"><i class="fa-duotone fa-triangle-exclamation"></i> The website is under maintenance due to some bugs or update.</span>`
     },
     "commands": {
         "help": {
@@ -628,4 +628,5 @@ async function getInputValue(){
 }
 
 openTerminal();
+
 
